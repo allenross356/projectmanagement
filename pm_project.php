@@ -72,6 +72,10 @@ Architecture for Project's Life-Cycle:
 	
 	The employer can mark a project Complete or Canceled. If the project is canceled, the manager will determine if the coder should receive partial or full amount of the R earnings that he was supposed to get if the project was actually marked completed by the employer. This in turn depends on how much the coder actually worked on the project which the manager has to judge himself. However, the manager can make this decision only if the employer pays nothing before canceling the project or he pays upto only 5% of the project. If the employer pays over 5% before cancelling the project, the employees get paid that amount, and the coder doesn't get anything more. The manager and marketer don't earn anything extra from the R income if the project gets cancelled, only the coder does (if the manager wants).
 	
+	employer can request to reassign the project to another manager, or another coder, or both.
+	
+	one project may require multiple coders or employees in the team. This decision will be taken by the manager. Manager can higher multiple coders to 
+	
 	If the employer cancels the project while there is a milestone in the project <TODO>
 	
 	coder can reassign the project to another coder with manager's permission. If the coder stops responding msgs to manager for over a threshold time period, then another coder is assigned automatically. The coder has 
@@ -271,8 +275,10 @@ changeProjectEarningBy($projectId,$amount,$explanation=null)
 Permission: Manager, Coder
 Description: Changes the project earnings for coder. Depending on who is changing the budget and by how much, it may or may not need approval from others. The R value is recalculated and the difference is debited/credited  from/to the R account.
 
+payCoderOnCancelledProject($projectId,$percentage)
+Permission: Manager
+Description: Manager will decide whether the coder should get paid from his R amount on project and by how much if the project gets cancelled. This depends on how much the coder actually worked on the project before the project got cancelled. Its possible the project got cancelled because of the coder's poor quality work, in which case the coder shouldn't get paid at all. Other times its possible that the coder worked great, but still the employer cancelled. In this case, the coder should get paid for his work. This decision will be made by the manager.
 
-makePayment()
 
 
 
