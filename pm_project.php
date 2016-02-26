@@ -70,11 +70,11 @@ Architecture for Project's Life-Cycle:
 	
 	When anyone changes the budget or request of changing the budget is accepted, the R earning for each employee is recalculated, and the difference is charged/refunded from/to the R account of each employee. (Covered,)
 	
-	The employer can mark a project Complete or Canceled. If the project is canceled, the manager will determine if the coder should receive partial or full amount of the R earnings that he was supposed to get if the project was actually marked completed by the employer. This in turn depends on how much the coder actually worked on the project which the manager has to judge himself. However, the manager can make this decision only if the employer pays nothing before canceling the project or he pays upto only 5% of the project. If the employer pays over 5% before cancelling the project, the employees get paid that amount, and the coder doesn't get anything more. The manager and marketer don't earn anything extra from the R income if the project gets cancelled, only the coder does (if the manager wants).
+	The employer can mark a project Complete or Canceled. If the project is canceled, the manager will determine if the coder should receive partial or full amount of the R earnings that he was supposed to get if the project was actually marked completed by the employer. This in turn depends on how much the coder actually worked on the project which the manager has to judge himself. However, the manager can make this decision only if the employer pays nothing before canceling the project or he pays upto only 5% of the project. If the employer pays over 5% before cancelling the project, the employees get paid that amount, and the coder doesn't get anything more. The manager and marketer don't earn anything extra from the R income if the project gets cancelled, only the coder does (if the manager wants). (Covered,)
 	
 	employer can request to reassign the project to another manager, or another coder, or both.
 	
-	one project may require multiple coders or employees in the team. This decision will be taken by the manager. Manager can higher multiple coders to 
+	one project may require multiple coders or employees in the team. This decision will be taken by the manager. Manager can higher multiple coders to get the project done.
 	
 	If the employer cancels the project while there is a milestone in the project <TODO>
 	

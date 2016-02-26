@@ -23,6 +23,19 @@ Interface:
 autoassignProjectToCoder($projectId)
 assignProjectToCoder($projectId,$coderEmail)
 
+requestReassignToCoder($projectId)
+Permission: Employer only.
+Description: 
+
+reassignToNewCoder($projectId,$newCoderEmail)
+Permission: Manager only.
+Description: If only 1 coder is hired for the project, that coder will be removed from the project, and the new coder will be hired.
+
+reassignToNewCoder($projectId,$coderEmail,$newCoderEmail)
+Permission: Manager Only.
+Description: If 1 or more coders are hired for the project, a coder will be replaced by another coder.
+
+
 
 */ 
 
