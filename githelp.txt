@@ -1,0 +1,14 @@
+git config --global credential.helper wincred
+
+git config --global credential.helper "cache --timeout=2592000"
+
+git mv : for moving file or renaming (use -r for moving/replacing directories)
+
+
+git config --list	: will display all profile variables
+git config user.name	: Will display current name
+
+git config --global user.name <Name>	: will set name
+git config --global user.email <Email>	: will set email
+
+
