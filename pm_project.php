@@ -78,7 +78,15 @@ Architecture for Project's Life-Cycle:
 	
 	one project may require multiple coders or employees in the team. This decision will be taken by the manager. Manager can higher multiple coders to get the project done. (Covered,)
 	
-	All coders of one project can communicate with each other individually and in a group. <TODO>
+	All coders of one project can communicate with each other individually and in a group. (Covered,)
+	
+	Employee can take an emergency leave only at a cost of a penalty. The penalty increases with the frequency of taking emergency leaves. (Covered,)
+	
+	Coder can send msgs to all coders hired in his project. Each msg will be also notified to the manager as well. (Covered,)
+	
+	Manager can set the budget for each of the coder in the project. A manager can mark a project to be a simple project, or a complex project. For simple project, only one coder will be hired. For complex project, manager can open multiple openings/positions for the project. For each position, the manager will be able to set the budget for the coder and explain the position requirements which will be displayed to the coders along with the orignal project description from the employer.
+	
+	Manager and marketer can edit the project description from the employer in order to hide the contact details of the project.
 	
 	If the employer cancels the project while there is a milestone in the project <TODO>
 	
@@ -237,6 +245,14 @@ addProject($creatorEmail,$employerEmail,$projectTitle,$projectDescription,$proje
 Permission: Employer, Manager, Marketer
 Description: Creates a project and adds to the database.
 
+editProject($projectId,$projectTitle,$projectDescription,Array $skills)
+Permission: Creator of project, Manager, Marketer
+Description: Edit the project.
+
+editProject($projectId,$projectTitle,$projectDescription,$projectBudget,Array $skills)
+Permission: Creator of the project
+Description: Edit the project. Only creator of the project can edit the budget of the project.
+
 archiveProject($projectId)	 
 Permission: Creator of the project.
 Description: Archives the project.
@@ -244,6 +260,26 @@ Description: Archives the project.
 cancelProject($projectId)		 
 Permission: Can be called by the employer only.
 Description: Cancels the project. Takes care of the R amount of each employee (refund into R account) and all other responsibilities. <TODO>
+
+validateProject($projectId,$projectTitle,$projectDescription,$projectBudget,Array $skills)
+Permission: Manager of the project
+Description: Manager can validate the project so that it will be ready to be opened for the coders to put their interests in.
+
+markProjectSimple($projectId)
+Permission: Manager of the project.
+Description: Marks the project simple. By default the project is marked simple.
+
+markProjectComplex($projectId)
+Permission: Manager of the project.
+Description: Marks the project complex. By default the project is marked simple.
+
+openProjectPosition($projectId,$title,$description,$budget,Array $skills)
+Permission: Manager 
+Description: Opens a position for the project. Can be called only if project is marked complex by the manager.
+
+closeProjectPosition($projectPositionId)
+Permission: Manager
+Description: Closes the opened position for the project.
 
 openProjectForCoders($projectId)	//opens a project for coders so that the coders will get notified, and they can put an interest in the project, or ask questions on the project
 Permission: Assigned Manager of the project.
