@@ -23,6 +23,9 @@ Interface:
 autoassignProjectToCoder($projectId)
 assignProjectToCoder($projectId,$coderEmail)
 
+
+
+
 requestReassignToCoder($projectId)
 Permission: Employer only.
 Description: 
@@ -34,6 +37,26 @@ Description: If only 1 coder is hired for the project, that coder will be remove
 reassignToNewCoder($projectId,$coderEmail,$newCoderEmail)
 Permission: Manager Only.
 Description: If 1 or more coders are hired for the project, a coder will be replaced by another coder.
+
+reassignToNewManager($projectId,$managerEmail)
+Permission: Employer of project
+Description: Employer can reassign to a different manager the project.
+
+reassignToNewManager($projectId)
+Permission: Employer of project
+Description: Employer can reassign to a new manager. This function will find an available manager automatically and assign him.
+
+autoassignProjectToManager($projectId)
+Permission: Employer of Project or Creator of Project (Employer, Marketer, Manager) 	
+Description: Assigns the project to manager automatically. If the project is created by a manager, preference will be given to assign the same manager to the project. If he is not available, another manager will be assigned.
+
+assignProjectToManager($projectId,$managerEmail);
+Permission: Marketer, Employer, Manager
+Description: <TODO>
+
+assignProjectToCoder($projectId,$coderEmail)
+Permission: Manager of the project only.
+Description: If the coder put an interest in the project, the project will be assigned without permission from coder. If the coder didn't put an interest, he will be awarded the project which he may or may not accept. In either case, it will happen only if he is available, else it will give an error and manager will be notified.
 
 
 
