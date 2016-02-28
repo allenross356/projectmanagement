@@ -84,23 +84,24 @@ Architecture for Project's Life-Cycle:
 	
 	Coder can send msgs to all coders hired in his project. Each msg will be also notified to the manager as well. (Covered,)
 	
-	Manager can set the budget for each of the coder in the project. A manager can mark a project to be a simple project, or a complex project. For simple project, only one coder will be hired. For complex project, manager can open multiple openings/positions for the project. For each position, the manager will be able to set the budget for the coder and explain the position requirements which will be displayed to the coders along with the orignal project description from the employer.
+	Manager can set the budget for each of the coder in the project. A manager can mark a project to be a simple project, or a complex project. For simple project, only one coder will be hired. For complex project, manager can open multiple openings/positions for the project. For each position, the manager will be able to set the budget for the coder and explain the position requirements which will be displayed to the coders along with the orignal project description from the employer. (Covered,)
 	
-	Manager and marketer can edit the project description from the employer in order to hide the contact details of the project.
+	Manager and marketer can edit the project description from the employer in order to hide the contact details of the project. (Covered,)
 	
 	If the employer cancels the project while there is a milestone in the project <TODO>
 	
-	coder can reassign the project to another coder with manager's permission. If the coder stops responding msgs to manager for over a threshold time period, then another coder is assigned automatically. The coder has <TODO>
+	coder can reassign the project to another coder with manager's permission. If the coder stops responding msgs to manager for over a threshold time period, then another coder is assigned automatically. The coder will be charged penalty for transferring. (Covered,)
+	
 	
 	manager can reassign the project to another manager. If the manager stops responding msgs to employer or coder for over a threshold time period, then another manager is assigned automatically. The old manager has is penalized <TODO> how?.
 	
-	The coder or manager can provide a leave request for a specified duration, which if accepted by the employer, the project won't be reassigned automatically to anyone else until after the threshold period is over. After the threshold period is over, employer will be notified automatically if he wants to reassign the project to another coder or manager. The coder and manager can request to extend the leave period. Once leave accepted, the employer cannot shorten the duration but request shortening the duration.
+	The coder or manager can provide a leave request for a specified duration, which if accepted by the employer, the project won't be reassigned automatically to anyone else until after the threshold period is over. After the threshold period is over, employer will be notified automatically if he wants to reassign the project to another coder or manager. The coder and manager can request to extend the leave period. Once leave accepted, the employer cannot shorten the duration but request shortening the duration. (Covered,)
 	
-	Employer can  reassign the project to a different manager or request the manager to reassign the project to a different coder.
+	Employer can  reassign the project to a different manager or request the manager to reassign the project to a different coder. (Covered,)
 	
-	manager can reassign the project to another coder anytime.
+	manager can reassign the project to another coder anytime. (Covered,)
 	
-	If employer files for a refund during providing ratings, and if his request is accepted, then each of the employees will be charged some amount from their earnings. First they will be charged from the amount that they aren't paid yet, the balance they will be charged from their R account, and then they will be charged in their P account. If their P account goes in negative, they will be charged 10% interest on it every month until they settle it up. If in the meantime, they make money in thier R account, then the negative P account will be deducted from their R account. If they don't settle the P account ever, their account will be shut down, and the user will be deleted from the system.
+	If employer files for a refund during providing ratings, and if his request is accepted, then each of the employees will be charged some amount from their earnings. First they will be charged from the amount that they aren't paid yet, the balance they will be charged from their R account, and then they will be charged in their P account. If their P account goes in negative, they will be charged 10% interest on it every month until they settle it up. If in the meantime, they make money in thier R account, then the negative P account will be deducted from their R account. If they don't settle the P account ever, their account will be shut down, and the user will be deleted from the system. 
 
 	The project will be assigned to a manager automatically. Or the Employer can particular request to assign the project to a specific manager. If the manager is available, he will be assigned. If he is unavailable, the employer will be notified of his unavailability. The employer can choose to get notification once the manager becomes available again. And employer can also choose to assign the project to manager automatically as soon as the manager becomes available. If the project is created by the marketer, the project will be assigned automatically to a manager.
 	
@@ -192,13 +193,23 @@ Architecture for Project's Life-Cycle:
 			Posting Content
 			Article Writing
 			Twitter Posting/Tweeting/Replying/Retweeting
-		Special Tasks 
+		Complaints Handling Task 
+			Responsibility Of: Manager, Marketer
+		Requests Handling Task
+			Responsibility Of: Manager, Marketer
+		Quality Checking Task
+			Responsibility Of: Manager, Marketer
+		Special Tasks (Such as digital marketing, forum marketing, social media marketing, etc.)
 			Responsibility Of: Marketer, Manager, Coder
 	Make sure to keep every employee in the system so busy that he will not be willing to take over work from outside, so he will direct all outside employers to the platform.
 	
 	The employees before being registered fully will have to give a small multiple questions test. If they give more than x number of incorrect answers, then they have to give test again (after they go thru the material). If they give only a few wrong answers, they are pointed to revise particular material only before answering the incorrect ones again.
 	
 	One project can have multiple coders hired by the manager.
+	
+	Build a portal for advertisers.
+	
+	Build a special system for software companies. Employee check in and check out feature by logging in and logging out. Employee productivity measurement tool which will monitor the activity of the employee on the system, such as websites visited, keystrokes, mouse clicks, mouse movements etc.
 	
 	
 Architecture of Settings:

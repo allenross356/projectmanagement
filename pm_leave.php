@@ -22,8 +22,12 @@ Permission: Creator of the leave request.
 Description: Creator of the leave can request to extend the leave.
 
 extendTempLeave($leaveId,$additionalNumDays)
-Permission: 
-Description:
+Permission: Employer
+Description: Employer can extend the leave period of the employee.
+
+reduceTempLeave($leaveId,$reduceByNumDays)
+Permission: Leave requestor
+Description: The employee can reduce the leave period for himself.
 
 grantLeaveRequest($leaveId)
 Permission: Employer of the creator of the leave.
@@ -45,7 +49,6 @@ emergencyLeave($expectedNumDays,$explanation)
 Permission: Any Employee
 Description: If coder calls this function, the manager and employer will be notified of this. It will penalize the caller of the function. The manager or employer have an option to reassign the project/responsibilities to someone else. The first call will be penalized with negligible amount, and each subsequent calls will be penalized with progressively increased amount.
 
-Chron:
-Check for employees who haven't yet turned from leave yet.
+
 */
 ?>

@@ -58,7 +58,9 @@ assignProjectToCoder($projectId,$coderEmail)
 Permission: Manager of the project only.
 Description: If the coder put an interest in the project, the project will be assigned without permission from coder. If the coder didn't put an interest, he will be awarded the project which he may or may not accept. In either case, it will happen only if he is available, else it will give an error and manager will be notified.
 
-
+transferOwnResponsibilities($projectId)
+Permission: Marketer, Coder, Manager
+Description: The employee can transfer his own responsibilities to another employee at a cost of penalty in case of emergencies.
 
 */ 
 
