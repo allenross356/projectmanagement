@@ -3,6 +3,9 @@
 /*
 
 Architecture:
+Rules -
+	Each user will be notified of each and every action that occurs on the system that is directly or indirectly related to him.
+	Since there are a lot of different kinds of notifications that a user may receive, each notification will be categorized into its type and priority level so that the user can keep a better track of them.
 	Users get notified when:
 		they receive msgs.
 		they receive files.
