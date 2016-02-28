@@ -211,6 +211,8 @@ Architecture for Project's Life-Cycle:
 	
 	Build a special system for software companies. Employee check in and check out feature by logging in and logging out. Employee productivity measurement tool which will monitor the activity of the employee on the system, such as websites visited, keystrokes, mouse clicks, mouse movements etc.
 	
+	For video files, create a feature to edit the video files to hide some portions of the video so as to not make the employer or coder information visible.
+	
 	
 Architecture of Settings:
 
