@@ -55,8 +55,20 @@ Permission: Marketer, Employer, Manager
 Description: <TODO>
 
 assignProjectToCoder($projectId,$coderEmail)
-Permission: Manager of the project only.
-Description: If the coder put an interest in the project, the project will be assigned without permission from coder. If the coder didn't put an interest, he will be awarded the project which he may or may not accept. In either case, it will happen only if he is available, else it will give an error and manager will be notified.
+Permission: Manager of the project.
+Description: If manager is calling this function and If the coder put an interest in the project, the project will be assigned without permission from coder. If the coder didn't put an interest, he will be awarded the project which he may or may not accept. In either case, it will happen only if he is available, else it will give an error and manager will be notified. If the coder is unavailable, the manager will be notified, in which case manager cannot choose to auto-assign the coder as soon as he becomes available, because employer might not want to delay the project due to this. Employer can himself assign the project to the coder and mark it auto-assign to that it will be assigned as soon as the coder becomes available.
+
+requestAssignProjectToCoder($projectId,$projectId2)
+Permission: Employer.
+Description: Employer can request the assignment of the new project to a coder who worked on one of his previous projects, or from someone else's project. If the coder is not available, then the employer will be notified in which case the employer may choose to get notified once the coder becomes available, or else choose to award the project to coder automatically once the coder becomes available. If the coder is already available, then the project will be awarded to him which he may or may not accept unless he already put an interest on the project.
+
+acceptProject($projectId)
+Permission: Coder only.
+Description: The coder accepts the project.
+
+rejectProject($projectId)
+Permission: Coder only.
+Description: The coder rejects the project.
 
 transferOwnResponsibilities($projectId)
 Permission: Marketer, Coder, Manager

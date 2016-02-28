@@ -15,7 +15,7 @@ Description: Appropriate actions will be taken automatically for those employees
 
 communityHealthCheckUp()
 Frequency: Monthly
-Description: Check the following list: (i) Number of complaints increasing or decreasing, (ii) Community users increasing rate is increasing or decreasing, (iii) Number of disputes increasing or decreasing, (iv) 
+Description: Check the following list: (i) Number of complaints increasing or decreasing, (ii) Rate of community growth is increasing or decreasing, (iii) Number of disputes increasing or decreasing, (iv) Number of Teamviewer sessions increasing or decreasing, (v) Rate of increasing referrals is increasing or decreasing, (vi) Trainer requirements increasing or decreasing, (vii) Customer satisfaction level increasing or decreasing, (viii) Etc. (ix) Number of advertisers and business increasing or decreasing, (x) Growth rate of affiliate marketers is increasing or decreasing
 
 chargeUsers()
 Frequency: Everyday

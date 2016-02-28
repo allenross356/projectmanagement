@@ -101,18 +101,18 @@ Architecture for Project's Life-Cycle:
 	
 	manager can reassign the project to another coder anytime. (Covered,)
 	
-	If employer files for a refund during providing ratings, and if his request is accepted, then each of the employees will be charged some amount from their earnings. First they will be charged from the amount that they aren't paid yet, the balance they will be charged from their R account, and then they will be charged in their P account. If their P account goes in negative, they will be charged 10% interest on it every month until they settle it up. If in the meantime, they make money in thier R account, then the negative P account will be deducted from their R account. If they don't settle the P account ever, their account will be shut down, and the user will be deleted from the system. 
+	If employer files for a refund during providing ratings, and if his request is accepted, then each of the employees will be charged some amount from their earnings. First they will be charged from the amount that they aren't paid yet, the balance they will be charged from their R account, and then they will be charged in their P account. If their P account goes in negative, they will be charged 10% interest on it every month until they settle it up. If in the meantime, they make money in thier R account, then the negative P account will be deducted from their R account. If they don't settle the P account ever, their account will be shut down, and the user will be deleted from the system. (Covered,)
 
-	The project will be assigned to a manager automatically. Or the Employer can particular request to assign the project to a specific manager. If the manager is available, he will be assigned. If he is unavailable, the employer will be notified of his unavailability. The employer can choose to get notification once the manager becomes available again. And employer can also choose to assign the project to manager automatically as soon as the manager becomes available. If the project is created by the marketer, the project will be assigned automatically to a manager.
+	The project will be assigned to a manager automatically. Or the Employer can particular request to assign the project to a specific manager. If the manager is available, he will be assigned. If he is unavailable, the employer will be notified of his unavailability. The employer can choose to get notification once the manager becomes available again. And employer can also choose to assign the project to manager automatically as soon as the manager becomes available. If the project is created by the marketer, the project will be assigned automatically to a manager. (Covered,)
 	
 	
-	Similarly, the employer can request the system to assign the project to the same coder. Coder will let the employer know if the coder is unavailable. If the coder is unvailable, the employer can choose to get notification as soon as the coder becomes available, or employer can choose award the project to the coder as soon as he becomes available. If the coder is available, the coder must accept the project in order to be assigned for the project, unless he put Interest on the project in which case he must stick with the project if gets awarded.
+	Similarly, the employer can request the system to assign the project to the same coder. System will let the employer know if the coder is unavailable. If the coder is unvailable, the employer can choose to get notification as soon as the coder becomes available, or employer can choose to award the project to the coder as soon as he becomes available. If the coder is available, the coder must accept the project in order to be assigned for the project, unless he put Interest on the project in which case he must stick with the project if gets awarded. (Covered,)
 	
-	The project will be assigned to an interested coder automatically. Or the manager can offer a particular coder the project. If the coder is unavailable, the manager will be notified, and he won't be able to assign the project to the coder until he becomes available. He will NOT have the option of autoassigning or autoawarding the coder as soon as he becomes available because the employer might not want any delays in the project. If the employer is OK with the delay, then the manager should convey to the coder that he must not put interest on any other project after he is available again.
+	The project will be assigned to an interested coder automatically. Or the manager can offer a particular coder the project. If the coder is unavailable, the manager will be notified, and he won't be able to assign the project to the coder until he becomes available. He will NOT have the option of autoassigning or autoawarding the coder as soon as he becomes available because the employer might not want any delays in the project. If the employer is OK with the delay, then the manager should convey to the coder that he must not put interest on any other project after he is available again. (Covered,) 
 	
-	If a coder puts Interest on a project, and if he is assigned the project by the system automatically or by the manager automatically, the coder must stick with the project.
+	If a coder puts Interest on a project, and if he is assigned the project by the system automatically or by the manager automatically, the coder must stick with the project. (Covered,)
 
-	Manager can mark the project "too low budget", which will negatively impact ratings of marketer if the project was created by the marketer. This will force marketers to get projects with adequate budget. For projects that are not created by the marketer, marketer can mark the project with "too low budget", in which case if the project was created by employer himself and the project was failed then it will reduce bad ratings on the manager and/or coder.
+	Manager can mark the project "too low budget", which will negatively impact ratings of marketer if the project was created by the marketer. This will force marketers to get projects with adequate budget. For projects that are not created by the marketer, marketer can mark the project with "too low budget", in which case if the project was created by employer himself and the project was failed then it will reduce bad ratings on the manager and/or coder. (Covered,)
 	
 	The employer, coder, and manager can upload any files on a project for each other's viewing. When employer uploads a file, its only viewable to the manager, and the manager can mark it to let the coder view. When coder uploads a file, its only visible to manager, and manager can mark it to let the employer view. When manager uploads a file, he can choose whom he wants it to view. Also, the app provides functionality to compress the files before uploading.
 	
@@ -253,7 +253,7 @@ People can enter the skills of their choice, and if the skill is not found, it w
 /*
 Interface:
 addProject($creatorEmail,$employerEmail,$projectTitle,$projectDescription,$projectBudget,Array $skills)		
-Permission: Employer, Manager, Marketer
+Permission: Employer, Marketer
 Description: Creates a project and adds to the database.
 
 editProject($projectId,$projectTitle,$projectDescription,Array $skills)
@@ -334,7 +334,21 @@ markDuplicateProject($projectId1,$projectId2)
 Permission: Manager
 Description: Manager can mark his newly assigned project as a duplicate project, which once he does will be cancelled canceled.
 
+markProjectBudgetTooLow($projectId)
+Permission: Manager (if the project was created by the marketer), Marketer (if the project was created by the employer)
+Description: If marketer created the project, then manager can mark it too-low-budget so that it will affect the marketer's ratings in negative way, and will protect manager's ratings if he fails the project. If the employer created the project himself, the marketer can mark it too-low-budget so that manager's ratings won't be affected if the project is failed.
 
+submitRefundRequest($projectId,$amount,$explanation)
+Permission: Employer
+Description: Employer can submit a refund request while rating the project once the project is completed.
+
+acceptRefundRequest($requestId,$amount,$responsibilityDistribution)
+Permission: Request Handler (Could be an unrelated manager or marketer)
+Description: The request handler accepts the refund request, in which case the refund is provided to the employer. The request handler also mentions distribution of the responsibilities of each employee handling the project in making the erros that lead to the refund request so that the amount will be penalized the appropriate distribution from each employee.
+
+denyRefundRequest($requestId)
+Permission: Request Handler (Could be an unrelated manager or marketer)
+Description: The request handler denies the refund request. 
 
 
 */
