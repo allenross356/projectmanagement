@@ -21,5 +21,9 @@ chargeUsers()
 Frequency: Everyday
 Description: For users who are on monthly subscription, charge them on monthly/yearly basis.
 
+checkRemoteMeetingConditions()
+Freqeuncy: Every minute (Optimize it to run less frequently)
+Description: Check for the conditions of remote meeting, i.e. if coder is online, if employer is online, if manager is online, etc. and host the meeting as required or take appropriate steps/actions. 
+
 */
 ?>
