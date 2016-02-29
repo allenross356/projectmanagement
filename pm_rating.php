@@ -42,18 +42,33 @@ Description: Marketer gives ratings to everyone once the project in which he was
 
 
 **************** REMOTE MEETING **************
-invigilatorRatesMeeting()
-
+invigilatorRatesMeeting($meetingId,$ratings)
+Permission: Invigilator (Unrelated Marketer, Unrelated Manager)
+Description: If the manager is absent during the meeting and the invigilator facilitates the meeting, then the 
 
 **************** DISPUTE **************
+invigilatorRatesDispute($disputeId,$ratings)
+Permission: Invigilator (Unrelated Marketer, Unrelated Manager)
+Description:
 
+disputeParticipantRatesInvigilator($disputeId,$ratings)
+Permission: Participants of Dispute (Manager, Employer, )
+Description:
 
 **************** TASK QUALITY **************
+invigilatorRatesTaskQuality()
+Permission:
+Description:
 
 **************** COMPLAINTS **************
+invigilatorRatesComplaint
+Permission:
+Description:
 
 **************** CUSTOMER SERVICE **************
-
+invigilatorRatesComplaint
+Permission:
+Description:
 
 
 */
