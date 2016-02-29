@@ -6,6 +6,7 @@ Architecture:
 
 Interface:
 
+**************** PROJECT **************
 markProjectImpossible($projectId)
 Permission: Manager
 Description: The manager can mark the project impossible. This will give an indication to the system that the project was indeed a hard and technical impossible project. However, the system won't take the manager's feedback for granted, and implement other ways to confirm this.
@@ -21,6 +22,39 @@ Description: Marketer can mark a project incomplete by the manager. This is diff
 markProjectComplete($projectId)
 Permission: Employer
 Description: Employer can mark the project complete after the entire payment is done. This is different from the system automatically marking the project complete.
+
+employerRatesProject($projectId,$ratings)
+Permission: Employer
+Description: Employer gives ratings to everyone once the project in which he was directly involved is completed or cancelled.
+
+coderRatesProject($projectId,$ratings)
+Permission: Coder
+Description: Coder gives ratings to everyone once the project in which he was directly involved is completed or cancelled.
+
+managerRatesProject($projectId,$ratings)
+Permission: Manager
+Description: Manager gives ratings to everyone once the project in which he was directly involved is completed or cancelled.
+
+marketerRatesProject($projectId,$ratings)
+Permission: Marketer
+Description: Marketer gives ratings to everyone once the project in which he was directly involved is completed or cancelled.
+
+
+
+**************** REMOTE MEETING **************
+invigilatorRatesMeeting()
+
+
+**************** DISPUTE **************
+
+
+**************** TASK QUALITY **************
+
+**************** COMPLAINTS **************
+
+**************** CUSTOMER SERVICE **************
+
+
 
 */
 
