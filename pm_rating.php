@@ -1,4 +1,19 @@
 <?php
+
+/*
+Architecture:
+
+
+Interface:
+
+markProjectImpossible($projectId)
+Permission: Manager
+Description: Once the project is completely paid off or cancelled by the employer, the manager can mark the project impossible. This will give an indication to the system that the project was indeed a hard and technical impossible project. However, the system won't take the manager's feedback for granted, and implement other ways to confirm this.
+
+markProjectAbandonded($projectId)
+
+*/
+
 function employerRatesManager()
 {
 	

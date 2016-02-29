@@ -280,11 +280,11 @@ Description: Manager can validate the project so that it will be ready to be ope
 
 markProjectSimple($projectId)
 Permission: Manager of the project.
-Description: Marks the project simple. By default the project is marked simple.
+Description: Marks the project simple. Which means that only one coder will be hired and appropriate project flow will be implemented. By default the project is marked simple.
 
 markProjectComplex($projectId)
 Permission: Manager of the project.
-Description: Marks the project complex. By default the project is marked simple.
+Description: Marks the project complex. Which means that multiple coders will be hired and appropriate project flow will be implemented. By default the project is marked simple.
 
 openProjectPosition($projectId,$title,$description,$budget,Array $skills)
 Permission: Manager 
