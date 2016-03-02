@@ -82,6 +82,10 @@ Number of coders threshold 4 - below this threshold, managers will only depend o
 
 //<TODO> The marketers will be given incentive to create portfolio of best projects.
 
+//<TODO> After the launch of the app, choose the package billing in the Google Cloud SQL to lower the usage cost.
+
+//<TODO> Add SSL before launching the app.
+
 //<TODO> Implement Remote Viewing 
 
 //<TODO> Implement IP tracking to block users from creating multiple accounts of same or different types.
