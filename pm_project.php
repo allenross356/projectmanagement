@@ -215,6 +215,8 @@ Architecture for Project's Life-Cycle:
 	
 	For video files, create a feature to edit the video files to hide some portions of the video so as to not make the employer or coder information visible.
 	
+	Forum, Question/Answering, Consultancy, Help Features
+	
 	
 Architecture of Settings:
 
