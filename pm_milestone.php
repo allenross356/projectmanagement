@@ -57,6 +57,14 @@ disputeMilestone($milestoneId)
 Permission: Employer, Manager (only if certain conditions are met)
 Description: Dispute a milestone. Employer can dispute a milestone anytime. But Manager can dispute only if employer stops responding for a while, and the milestones will be released only if there are proofs that the coder and manager finished the work.
 
+giveUpDispute($disputeId)
+Permission: Employer, Manager (the opponent of the dispute)
+Description: When a dispute is created, the opponent can choose to give up, in which case the milestone will go to the user who created the dispute.
+
+contestDispute($disputeId)
+Permission: Employer, Manager (the opponent of the dispute)
+Description: When a dispute is created, the opponent can choose to contest the dispute, in which case the dispute is escalated to the next level. Then both parties have to put funds to contest the dispute. The manager of the dispute will not be able to use negative balance from his P account in order to deposit money for dispute. He won't be able to use R account funds at all for the dispute. 
+
 releaseAmountToCoder($projectId,$amount)
 Permission: Manager
 Description: Releases amount to coder from the amount that the employer has released for the project so far.
